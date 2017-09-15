@@ -1,0 +1,99 @@
+body{
+    font-size: 16px;
+    font-family: $textFont;
+}
+
+h1, h2, h3, p {
+    padding: 0;
+    margin: 0;
+    color: $textColour;
+}
+
+h1, h2, h3 {
+    color: $headingColour;
+}
+
+.titleBlock p {
+    font-weight: 300;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+ul, li {
+    list-style: none;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+button, input, textarea {
+    border-style: none;
+    background: none;
+}
+
+textarea {
+	resize: none;
+}
+
+.wrapper {
+    width: 1170px;
+    margin: 0 auto;
+    border: 1px solid red;
+}
+
+span {
+    font-weight: 700;
+}
+
+h1 {
+    font-size: $h1FontSize;
+    text-shadow: 3.5px 7px 0px rgba(0, 0, 0, 0.3);
+}
+
+button {
+    background: #fe3a0f;
+    width: 253px;
+    height: 66px;
+    border-radius: 500px;
+    margin-left: auto;
+    color: white;
+}
+
+h2 {
+    font-size: $h2FontSize;
+}
+
+p {
+    line-height: 30px;
+}
+
+.titleBlock {
+
+    h2, p {
+      text-align: center;
+      position: relative;
+    }
+
+    p::before, p::after {
+        content: "";
+        display: block;
+        height: 2px;
+        width: 100px;
+        position: absolute;
+        top: 50%;
+        background-color: white;
+    }
+
+    p::before {
+        left: -24px;
+    }
+
+    p::after {
+        right: -24px;
+    }
+}
