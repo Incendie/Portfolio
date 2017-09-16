@@ -1,42 +1,109 @@
-.hamburger{
-  background: $altBlack;
-  height: 6px;
+.hamburger{  
+  min-height: 38px;
   width: 40px;
-  position: absolute;
-  right: 130px;
-  top: 60px;
+  top: 10px;
+  right: 0;
+  position: absolute;  
+  cursor: pointer;
+  transform: rotate(0deg);
+  transition: .5s ease-in-out;
 
-  &::before, &::after {
-    content: "";
+  &.open {
+
+    span:first-child {
+      transform: rotate(45deg);
+      top: 0px;
+      opacity: 1;
+    }
+
+    span:nth-child(2) {
+      width: 0%;
+      opacity: 0;
+    }
+
+    span:nth-child(3) {
+      transform: rotate(-45deg);
+      top: 28px;
+      opacity: 1;
+    }
+  }
+
+  span {
     background: $altBlack;
     display: block;
+    width: 100%;
     height: 6px;
-    width: 40px;
     position: absolute;
-  }
+    opacity: 1;
+    left: 0;
+    transform: rotate(0deg);
+    transition: .25s ease-in-out;
+    transform-origin: left center;
 
-  &::before {
-    top: -16px;
-  }
-  &::after {
-    bottom: -16px;
+    &:nth-child(2) {
+      top: 16px;      
+    }
+
+    &:nth-child(3) {
+      top: 32px;      
+    }
   }
 }
 
-nav {
-  display: none;
+nav {  
+  position: fixed;
+  top: 70px;
+  left: calc(1170px - 720px + ((100% - 1170px) / 2);
+  overflow: hidden;
+  
+  ul {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    margin: 0;
+    margin-right: 50px;
+    padding: 16px 0;
+    position: relative;    
+    right: 0px;
+    overflow: hidden;
+
+    &.open li {
+      right: 0;
+    }
+
+    li {
+      margin-right: 50px;
+      position: relative;
+      right: -700px;
+      transition: .75s ease-in-out;
+      
+      a {
+        font-size: $textFontSize;
+      }
+    }
+  }
+}
+
+.header__nav {
+  // width: 500px;  
 }
 
 header {
   min-height: 800px;
-  background: rgba(37, 37, 37, 0.1);
+  background: linear-gradient(rgba(255,255,255,0.9), rgba(255,255,255,0.9)), url("../assets/bgLines.png");
+  background-size: cover;
+  background-position: center;
   padding: 155px 0;
   position: relative;
+
+  .wrapper {
+    position: relative;
+  }
 }
 
 .header__img {
   height: 450px;
-  width: calc(50% - 70px);
+  min-width: calc(50% - 70px);
   margin-right: 70px;
   position: relative;
 }
@@ -55,6 +122,7 @@ header {
   
   h1 {
     margin-top: 50px;
+    white-space: nowrap;
   }
 
   p {

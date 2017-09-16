@@ -11,4 +11,10 @@ $(()=>{
     autoPlay: 3000,
     pauseAutoPlayOnHover: false
   });
+
+  $('.hamburger').click(function(){
+    $(this).toggleClass('open');
+    $('.header__nav > ul').toggleClass('open');
+    $("nav").show();
+  });
 });

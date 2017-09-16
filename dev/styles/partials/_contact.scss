@@ -1,7 +1,10 @@
 .contact {
   background: $backgroundColour;
   padding: 182px;
-  position: relative;
+  
+  .wrapper {
+    position: relative;
+  }
 
   aside::before, aside::after {
     background-color: white;
