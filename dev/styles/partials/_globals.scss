@@ -79,6 +79,13 @@ p {
       position: relative;
     }
 
+    p {
+        margin: 0 auto;        
+        max-width: 170px;
+        font-size: 0.9rem;
+        margin-bottom: 173px;
+    }
+
     p::before, p::after {
         content: "";
         display: block;
@@ -90,10 +97,10 @@ p {
     }
 
     p::before {
-        left: -24px;
+        left: -124px;
     }
 
     p::after {
-        right: -24px;
+        right: -124px;
     }
 }

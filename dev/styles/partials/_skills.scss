@@ -1,0 +1,24 @@
+.skills {
+  background: $backgroundColour;
+  padding: 215px 0;
+  
+  h2, h3, p {
+    color: white;
+  }
+
+  h2 {
+    text-align: center;
+  }
+}
+
+.skills__container {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.skillBlock {
+  width: calc(100% / 12);
+  margin: 0 40px 40px 40px;  
+}
