@@ -1,0 +1,22 @@
+.gallery {
+  padding: 120px 0;  
+}
+
+.main-carousel {
+  height: 480px;
+}
+
+.carousel-cell {
+  height: 100%;
+  min-width: 480px;
+}
+
+.flickity-page-dots {
+  bottom: -47px;
+
+  .dot {
+    width: 23px;
+    height: 23px;
+    margin: 0 9px;
+  }
+}

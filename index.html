@@ -4,6 +4,11 @@
 <head>
 	<meta charset="UTF-8">
 	<title>My Project</title>
+	<link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
+	<script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+	<script src="https://use.fontawesome.com/6485e00915.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
 	<link rel="stylesheet" href="public/styles/style.css">
 </head>
@@ -34,7 +39,7 @@
 					</div>
 					<h1>Anson Li</h1>
 					<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rerum iure, quam aut quis aliquam consequatur mollitia dignissimos nesciunt pariatur. Eius.</p>
-					<button>Join us</button>
+					<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">Join us</button>
 				</div>
 			</div><!--/.header__container-->
 		</div><!--/.wrapper-->
@@ -123,29 +128,68 @@
 			<h2>Gallery</h2>
 			<p>Much pretty</p>
 		</div>
-		<ul>
-			<li><img src="" alt=""></li>
-			<li><img src="" alt=""></li>
-			<li><img src="" alt=""></li>
-			<li><img src="" alt=""></li>
+		<ul class="main-carousel">
+			<li class="carousel-cell"><img src="http://unsplash.it/480/480" alt=""></li>
+			<li class="carousel-cell"><img src="http://unsplash.it/480/480" alt=""></li>
+			<li class="carousel-cell"><img src="http://unsplash.it/480/480" alt=""></li>
+			<li class="carousel-cell"><img src="http://unsplash.it/480/480" alt=""></li>
+			<li class="carousel-cell"><img src="http://unsplash.it/480/480" alt=""></li>
+			<li class="carousel-cell"><img src="http://unsplash.it/480/480" alt=""></li>
+			<li class="carousel-cell"><img src="http://unsplash.it/480/480" alt=""></li>
+			<li class="carousel-cell"><img src="http://unsplash.it/480/480" alt=""></li>
 		</ul>
 	</section><!--/.wrapper-->
 	<section class="work" id="work">
 		<div class="wrapper">
-			<div class="work__img">
-				<img src="http://unsplash.it/300/300" alt="">
+			<div class="titleBlock">
+				<h2>Work</h2>
+				<p>Stuff done</p>
 			</div>
-			<div class="blurb">
-				<h2>Some Work</h2>
-				<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Earum sint tempora, quas nostrum, necessitatibus nisi excepturi maiores nihil voluptatum natus doloremque molestiae nulla deleniti amet culpa impedit accusantium dolorem, odit iure magni? Quia asperiores necessitatibus, quibusdam facilis optio recusandae provident?</p>
-			</div>
+			<div class="project">
+				<div class="project__box">
+					<div class="project__box--img">
+						<img src="http://unsplash.it/300/300" alt="">
+					</div>
+					<div class="project__box--blurb">
+						<h3>Some Work</h3>
+						<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Earum sint tempora, quas nostrum, necessitatibus nisi excepturi maiores nihil voluptatum natus doloremque molestiae nulla deleniti amet culpa impedit accusantium dolorem, odit iure magni? Quia asperiores necessitatibus, quibusdam facilis optio recusandae provident?</p>
+					</div>
+				</div>
+				<div class="project__box">
+					<div class="project__box--img">
+						<img src="http://unsplash.it/300/300" alt="">
+					</div>
+					<div class="project__box--blurb">
+						<h3>Some Work</h3>
+						<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Earum sint tempora, quas nostrum, necessitatibus nisi excepturi maiores nihil voluptatum natus doloremque molestiae nulla deleniti amet culpa impedit accusantium dolorem, odit iure magni? Quia asperiores necessitatibus, quibusdam facilis optio recusandae provident?</p>
+					</div>
+				</div>
+				<div class="project__box">
+					<div class="project__box--img">
+						<img src="http://unsplash.it/300/300" alt="">
+					</div>
+					<div class="project__box--blurb">
+						<h3>Some Work</h3>
+						<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Earum sint tempora, quas nostrum, necessitatibus nisi excepturi maiores nihil voluptatum natus doloremque molestiae nulla deleniti amet culpa impedit accusantium dolorem, odit iure magni? Quia asperiores necessitatibus, quibusdam facilis optio recusandae provident?</p>
+					</div>
+				</div>
+				<div class="project__box">
+					<div class="project__box--img">
+						<img src="http://unsplash.it/300/300" alt="">
+					</div>
+					<div class="project__box--blurb">
+						<h3>Some Work</h3>
+						<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Earum sint tempora, quas nostrum, necessitatibus nisi excepturi maiores nihil voluptatum natus doloremque molestiae nulla deleniti amet culpa impedit accusantium dolorem, odit iure magni? Quia asperiores necessitatibus, quibusdam facilis optio recusandae provident?</p>
+					</div>
+				</div>
+			</div><!--/.project-->
 		</div><!--/.wrapper-->
 	</section><!--/.work-->
 	<section class="contact" id="contact">
 		<div class="wrapper">
 			<div class="contact__title">
 				<h2>Contact Me</h2>
-				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus, a? Itaque cum, excepturi blanditiis iste quod natus dolorem adipisci aliquid?</p>
+				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis, ratione!</p>
 			</div>
 			<div class="contact__form">
 				<aside>
@@ -158,31 +202,30 @@
 					</div>
 					<div class="form__email">
 						<label for="formEmail">Email</label>
-						<input type="email" id="formEmail" placeholder="What is your email?">
+						<input type="email" id="formEmail" placeholder="youremail@domain.com">
 					</div>
 					<div class="form__message">
 						<label for="formMsg">Message</label>
-						<textarea name="formMsg" id="formMsg" cols="30" rows="10"></textarea>
+						<textarea name="formMsg" id="formMsg" cols="30" rows="10" placeholder="What would you like to know?"></textarea>
 					</div>
+					<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" type="submit">Send!</button>
 				</form>
 			</div><!--/.contact__form-->
 		</div><!--/.wrapper-->
 	</section>
 	<footer>
-		<div class="wrapper">
-			<div class="titleBlock">
-				<h2>Misc Stuff</h2>
-				<p>Click the links</p>
-			</div>
-			<div class="socialBox">
-				<img src="" alt="">LinkedIn
-				<img src="" alt="">Twitter
-				<img src="" alt="">Github
-				<img src="" alt="">Instagram
-				<img src="" alt="">Blog
-			</div>
-		</div><!--/.wrapper-->
+		<i class="wrapper">
+			<h3>Stay in touch</h3>
+			<ul class="socialBox">
+				<li><a href=""><i class="fa fa-4x fa-linkedin-square"></i></a></li>
+				<li><a href=""><i class="fa fa-4x fa-twitter-square"></i></a></li>
+				<li><a href=""><i class="fa fa-4x fa-github-square"></i></a></li>
+				<li><a href=""><i class="fa fa-4x fa-instagram"></i></a></li>
+				<li><a href=""><i class="fa fa-4x fa-medium"></i></a></li>				
+			</ul>
+		</i><!--/.wrapper-->
 	</footer>
+	<script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
 	<script src="public/scripts/main.js"></script>
 </body>
 

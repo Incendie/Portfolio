@@ -1,0 +1,54 @@
+.contact {
+  background: $backgroundColour;
+  padding: 182px;
+  position: relative;
+
+  aside::before, aside::after {
+    background-color: white;
+  }
+  
+  h2, p, label {
+    color: white;
+  }
+
+  h2, p {
+    text-align: center;
+  }
+
+  .mdl-button--accent.mdl-button--accent.mdl-button--raised{
+    margin: 22px auto;
+    border-radius: 0;
+    width: 166px;
+    height: 70px;
+  }
+}
+
+form div {
+  margin: 0 auto;
+  width: 40%;
+}
+
+.form__name {
+  margin-top: 82px;
+}
+
+input, textarea {  
+  background: white;
+  padding: 20px;
+  min-width: 450px;
+  margin-bottom: 30px;
+
+  &::placeholder {
+    color: $headingColour;
+  }
+}
+
+input {
+  height: 70px;
+}
+
+label {  
+  display: block;
+  margin-bottom: 12px;
+}
+

@@ -1,0 +1,25 @@
+.work {
+  padding: 120px 0;
+}
+
+.project__box {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 64px;
+
+  &:nth-child(odd){
+    flex-direction: row-reverse;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  img{
+    margin: 0 auto;
+  }
+}
+
+.project__box--img, .project__box--blurb {
+  width: calc(50% - 20px);
+}
