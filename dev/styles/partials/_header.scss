@@ -47,6 +47,10 @@
     &:nth-child(3) {
       top: 32px;      
     }
+
+    &.contrast {
+      background: white;
+    }
   }
 }
 
