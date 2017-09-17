@@ -63,7 +63,7 @@ h1 {
 }
 
 .mdl-button--accent.mdl-button--accent.mdl-button--raised {
-    background: #fe3a0f;
+    background: $buttonColour;
     width: 253px;
     height: 66px;
     border-radius: 500px;
@@ -83,6 +83,15 @@ h3 {
 p {
     line-height: 30px;
     font-weight: 400;
+}
+
+.contrast {
+    color: white;
+
+    &:hover, &:focus {
+        color: $buttonColour;
+        font-weight: 700;
+    }
 }
 
 aside {
