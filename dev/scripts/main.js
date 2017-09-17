@@ -1,18 +1,24 @@
 const portfolio = {};
+
 portfolio.contrastNav = () => {
   let scrollStart = 0;
   let headerHomeChange = $('#home').offset().top;
   let headerAboutChange = $('#home').offset().top;
   let aboutContactChange = $('#about').offset().top;
+  let galleryChange = $('#gallery').offset().top;
   let skillChange = $('#skills').offset().top;
   let contactChange = $('#contact').offset().top;
 
   $(document).scroll( () => {
     scrollStart = $(document).scrollTop();
+    console.log(scrollStart)
     if ((scrollStart > headerHomeChange+70 && scrollStart < headerHomeChange+450)) {
       $(".header__nav li:first-child > a").addClass("contrast");
       if (scrollStart > headerHomeChange+125){        
         $(".header__nav li:nth-child(2) > a").addClass("contrast");
+      }
+      if (scrollStart > headerHomeChange+325) {
+        $(".header__nav li:nth-child(2) > a").removeClass("contrast");
       }
     }
     else if (scrollStart > aboutContactChange+125 && scrollStart < aboutContactChange+225){        
@@ -22,7 +28,7 @@ portfolio.contrastNav = () => {
       $(".header__nav li > a").addClass("contrast");
       $(".hamburger span").addClass("contrast");
 
-      if ((scrollStart > contactChange+250 && scrollStart < contactChange+350) || (scrollStart > contactChange+400 && scrollStart < contactChange+500) || (scrollStart > contactChange+550 && scrollStart < contactChange+750)) {
+      if ((scrollStart > contactChange+250 && scrollStart < contactChange+350) || (scrollStart > contactChange+400 && scrollStart < contactChange+475) || (scrollStart > contactChange+550 && scrollStart < contactChange+750)) {
         $(".header__nav li:nth-child(2) > a").removeClass("contrast");
         $(".header__nav li:nth-child(3) > a").removeClass("contrast");
       }
@@ -57,7 +63,14 @@ portfolio.flickity = () => {
   });
 }
 
+portfolio.emailAddress = () => {
+  let email = "contact";
+  let domain = "ansonli.io";
+  $('.emailAddy').html(`<a href="${email}@${domain}">${email}@${domain}</a>`)
+}
+
 portfolio.init = () => {
+  portfolio.emailAddress();
   portfolio.flickity();
   portfolio.hamburgerClick();
   portfolio.contrastNav();

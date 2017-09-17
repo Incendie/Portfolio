@@ -11,9 +11,13 @@
   }
 
   .titleBlock {
-    p::before, p::after {  
-      background-color: white;
-    }
+
+    p {
+      min-width: 320px;
+      &::before, &::after {  
+        background-color: white;
+      }
+    }    
   }
 }
 
@@ -26,5 +30,9 @@
 
 .skillBlock {
   width: calc(100% / 12);
-  margin: 0 40px 40px 40px;  
+  margin: 0 40px 40px 40px;
+
+  img {
+    user-select: none;
+  }
 }

@@ -14,10 +14,47 @@ footer {
 
   li {
     width: 20%;
+
+    &:first-child{
+      &:hover i, &:focus i {      
+        color: #0077b5;
+      }
+    }
+
+    &:nth-child(2){
+      &:hover i, &:focus i {      
+        color: #6e5494;
+      }
+    }
+
+    &:nth-child(3){
+      &:hover i, &:focus i {      
+        color: #1da1f2;
+      }
+    }
+
+    &:nth-child(4){
+      &:hover i, &:focus i {      
+        color: #f56040;
+      }
+    }
+
+    &:last-child{
+      &:hover i, &:focus i {      
+        color: #00ab6c;
+      }
+    }
+    
   }
 
   i {
     width: 100%;
+    transition: 0.3s ease-in-out;
+  }
+  
+  a {
+    height: 100%;
+    display: block;    
   }
 }
 

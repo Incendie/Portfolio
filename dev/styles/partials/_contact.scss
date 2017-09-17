@@ -1,6 +1,15 @@
 .contact {
   background: $backgroundColour;
   padding: 182px;
+
+  a {
+    color: white;
+    font-weight: 700;
+
+    &:hover, &:focus {
+      color: $buttonColour;
+    }
+  }
   
   .wrapper {
     position: relative;
@@ -22,7 +31,15 @@
     margin: 22px auto;
     border-radius: 0;
     width: 166px;
-    height: 70px;
+    height: 70px;    
+
+    &:hover, &:focus{
+      background: linear-gradient(rgba(255,255,255,0.45), rgba(255,255,255,0.45)), $buttonColour;
+    }
+  }
+
+  h2 {
+    margin-bottom: 26px;
   }
 }
 
