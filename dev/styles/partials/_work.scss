@@ -5,10 +5,11 @@
 .project__box {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 64px;
+  margin-bottom: 96px;
 
   &:nth-child(odd){
     flex-direction: row-reverse;
+    text-align: right;
   }
 
   &:last-child {
@@ -17,6 +18,9 @@
 
   img{
     margin: 0 auto;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
   }
 
   h3, h4 {

@@ -1,6 +1,6 @@
 .contact {
   background: $backgroundColour;
-  padding: 182px;
+  padding: 182px 0;
 
   a {
     color: white;
@@ -25,6 +25,9 @@
 
   h2, p {
     text-align: center;
+    display: block;
+    width: 90%;
+    margin: 0 auto;
   }
 
   .mdl-button--accent.mdl-button--accent.mdl-button--raised{
@@ -43,9 +46,15 @@
   }
 }
 
+form {
+  width: 100%;
+  display: block;
+  margin: 0 auto;
+}
+
 form div {
   margin: 0 auto;
-  width: 40%;
+  width: 450px;
 }
 
 .form__name {

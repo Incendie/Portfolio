@@ -2,11 +2,12 @@
   min-height: 38px;
   width: 40px;
   top: 10px;
-  right: 0;
+  right: 10px;
   position: absolute;  
   cursor: pointer;
   transform: rotate(0deg);
   transition: .5s ease-in-out;
+  z-index: 100;
 
   &.open {
 
@@ -25,6 +26,10 @@
       transform: rotate(-45deg);
       top: 28px;
       opacity: 1;
+    }
+    
+    &.mq {
+        background: rgba(0,0,0,0.8);
     }
   }
 
@@ -48,9 +53,16 @@
       top: 32px;      
     }
 
-    &.contrast {
+    &.contrast, &.mq {
       background: white;
     }
+  }
+}
+.mq {
+  background: rgba(0,0,0,0.8);
+
+  a {
+    color: white;
   }
 }
 
@@ -113,6 +125,10 @@ header {
 
   .wrapper {
     position: relative;
+  }
+
+  p {
+    font-size: 1.5rem;
   }
 }
 

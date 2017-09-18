@@ -97,8 +97,8 @@ p {
 aside {
   transform: rotate(-90deg) translateX(50%);
   position: absolute;
-  left: -173px;
-  top: calc(50% + 65px);
+  left: calc(-5% - 173px);
+  top: 400px;
 
   &::before, &::after {
     content: "";

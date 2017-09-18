@@ -1,5 +1,6 @@
 footer {
-  padding: 120px 0;
+  padding-top: 120px;
+  padding-bottom: 40px;
 
   h3 {
     margin: 0 auto;
@@ -9,7 +10,6 @@ footer {
   }
 
   ul {
-    width: 40%;
     margin: 0 auto;
   }
 
@@ -51,6 +51,7 @@ footer {
   i {
     width: 100%;
     transition: 0.3s ease-in-out;
+    text-align: center;
   }
   
   a {
@@ -61,11 +62,12 @@ footer {
   p {
     font-size: 1.5rem;
     text-align: center;
-    margin-top: 22px;
+    margin-top: 45px;
   }
 }
 
 .socialBox {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
+  margin: 0 200px;
 }

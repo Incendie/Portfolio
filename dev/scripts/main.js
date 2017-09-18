@@ -12,49 +12,67 @@ portfolio.contrastNav = () => {
   let skillChange = $('#skills').offset().top;
   let contactChange = $('#contact').offset().top;
   let footerChange = $('footer').offset().top;
+  const mq1200 = window.matchMedia( "(max-width: 1200px)" );
+  const mq768 = window.matchMedia( "(max-width: 768px)" );
 
-  $(document).scroll( () => {
-    scrollStart = $(document).scrollTop();
-    if ((scrollStart > headerHomeChange+70 && scrollStart < headerHomeChange+450)) {
-      $(".header__nav li:first-child > a").addClass("contrast");
-      if (scrollStart > headerHomeChange+125){        
-        $(".header__nav li:nth-child(2) > a").addClass("contrast");
+  if (!mq768.matches){
+    $(document).scroll( () => {
+      scrollStart = $(document).scrollTop();
+      if ((scrollStart > headerHomeChange+70 && scrollStart < headerHomeChange+450)) {
+        if (!mq1200.matches) {
+          $(".header__nav li:first-child > a").addClass("contrast");
+        }
+        if (scrollStart > headerHomeChange+125){        
+          $(".header__nav li:nth-child(2) > a").addClass("contrast");
+        }
+        if (scrollStart > headerHomeChange+325) {
+          $(".header__nav li:nth-child(2) > a").removeClass("contrast");
+        }
       }
-      if (scrollStart > headerHomeChange+325) {
-        $(".header__nav li:nth-child(2) > a").removeClass("contrast");
+      else if (scrollStart > aboutContactChange+125 && scrollStart < aboutContactChange+225 && !mq1200.matches){        
+        $(".header__nav li:last-child > a").addClass("contrast");
       }
-    }
-    else if (scrollStart > aboutContactChange+125 && scrollStart < aboutContactChange+225){        
-      $(".header__nav li:last-child > a").addClass("contrast");
-    }
-    else if ((scrollStart > skillChange-100 && scrollStart < skillChange+775) || (scrollStart > contactChange-100)) {
-      
-      if (scrollStart > inputNameChange-100 && scrollStart < inputNameChange-30){
-        $(".header__nav li:nth-child(2) > a").removeClass("contrast");
-        $(".header__nav li:nth-child(3) > a").removeClass("contrast");
-      }
-      else if (scrollStart > inputEmailChange-100 && scrollStart < inputEmailChange-30){
-        $(".header__nav li:nth-child(2) > a").removeClass("contrast");
-        $(".header__nav li:nth-child(3) > a").removeClass("contrast");
-      }
-      else if (scrollStart > textareaChange-100 && scrollStart < textareaChange+125){
-        $(".header__nav li:nth-child(2) > a").removeClass("contrast");
-        $(".header__nav li:nth-child(3) > a").removeClass("contrast");
-      }
-      else if (scrollStart > footerChange-100){
-        $(".header__nav li > a").removeClass("contrast");
-        $(".hamburger span").removeClass("contrast");
+      else if ((scrollStart > skillChange-100 && scrollStart < skillChange+775) || (scrollStart > contactChange-100)) {
+        
+        if (scrollStart > inputNameChange-100 && scrollStart < inputNameChange-30){
+          $(".header__nav li:nth-child(2) > a").removeClass("contrast");
+          $(".header__nav li:nth-child(3) > a").removeClass("contrast");
+          if (mq1200.matches){
+            $(".header__nav li:nth-child(4) > a").removeClass("contrast");
+            $(".header__nav li:last-child > a").removeClass("contrast");
+          }
+        }
+        else if (scrollStart > inputEmailChange-100 && scrollStart < inputEmailChange-30){
+          $(".header__nav li:nth-child(2) > a").removeClass("contrast");
+          $(".header__nav li:nth-child(3) > a").removeClass("contrast");
+          if(mq1200.matches){
+            $(".header__nav li:nth-child(4) > a").removeClass("contrast");
+            $(".header__nav li:last-child > a").removeClass("contrast");
+          }
+        }
+        else if (scrollStart > textareaChange-100 && scrollStart < textareaChange+125){
+          $(".header__nav li:nth-child(2) > a").removeClass("contrast");
+          $(".header__nav li:nth-child(3) > a").removeClass("contrast");
+          if (mq1200.matches){
+            $(".header__nav li:nth-child(4) > a").removeClass("contrast");
+            $(".header__nav li:last-child > a").removeClass("contrast");
+          }
+        }
+        else if (scrollStart > footerChange-100){
+          $(".header__nav li > a").removeClass("contrast");
+          $(".hamburger span").removeClass("contrast");
+        }
+        else {
+          $(".header__nav li > a").addClass("contrast");
+          $(".hamburger span").addClass("contrast");
+        }
       }
       else {
-        $(".header__nav li > a").addClass("contrast");
-        $(".hamburger span").addClass("contrast");
+          $(".header__nav li > a").removeClass("contrast");
+          $(".hamburger span").removeClass("contrast");
       }
-    }
-    else {
-        $(".header__nav li > a").removeClass("contrast");
-        $(".hamburger span").removeClass("contrast");
-    }
-  });
+    });
+  }
 }
 
 portfolio.hamburgerClick = () => {
@@ -62,6 +80,12 @@ portfolio.hamburgerClick = () => {
     $(this).toggleClass('open');
     $('.header__nav > ul').toggleClass('open');
     $("nav").show();
+    
+    const mq768 = window.matchMedia( "(max-width: 768px)" );
+    if (mq768.matches){
+      $("nav").toggleClass('mq');
+      $('nav > .hamburger > span').toggleClass('mq');
+    }
   });
 }
 
