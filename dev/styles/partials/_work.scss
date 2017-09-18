@@ -18,6 +18,21 @@
   img{
     margin: 0 auto;
   }
+
+  h3, h4 {
+    margin: 0;
+  }
+
+  h3 {
+    line-height: 55px;
+    text-transform: capitalize;
+  }
+
+  h4 {
+    font-style: italic;
+    font-size: 1.1rem;
+    margin-top: 10px;
+  }
 }
 
 .project__box--img, .project__box--blurb {
