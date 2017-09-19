@@ -15,7 +15,7 @@ portfolio.contrastNav = () => {
   const mq1200 = window.matchMedia( "(max-width: 1200px)" );
   const mq768 = window.matchMedia( "(max-width: 768px)" );
 
-  if (!mq768.matches){
+  // if (!mq768.matches){
     $(document).scroll( () => {
       scrollStart = $(document).scrollTop();
       if ((scrollStart > headerHomeChange+70 && scrollStart < headerHomeChange+450)) {
@@ -72,7 +72,7 @@ portfolio.contrastNav = () => {
           $(".hamburger span").removeClass("contrast");
       }
     });
-  }
+  // }
 }
 
 portfolio.hamburgerClick = () => {
