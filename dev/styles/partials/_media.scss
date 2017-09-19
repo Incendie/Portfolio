@@ -19,7 +19,11 @@
     left: calc(-30% - 20px);
   }
 
-  .header__img {
+  .contact aside {
+    left: -60px;
+  }
+
+  .header__img {1
     img {
       top: 50%;
       position: relative;
@@ -48,7 +52,7 @@
   }
 
   .skillBlock{
-    width: calc(100% / 8);
+    width: calc(100% / 7);
   }
 
   .work {
