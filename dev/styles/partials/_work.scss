@@ -12,6 +12,10 @@
     text-align: right;
   }
 
+  &:nth-child(even) button.mdl-button--accent.mdl-button--accent.mdl-button--raised {
+    margin-left: 0;
+  }
+
   &:last-child {
     margin-bottom: 0;
   }
@@ -28,7 +32,7 @@
   }
 
   h3 {
-    line-height: 55px;
+    line-height: 48px;
     text-transform: capitalize;
   }
 
@@ -36,6 +40,11 @@
     font-style: italic;
     font-size: 1.1rem;
     margin-top: 10px;
+    line-height: 20px;
+  }
+  
+  button {
+    margin-top: 22px;
   }
 }
 
@@ -48,3 +57,4 @@
   flex-direction: column;
   justify-content: space-around;
 }
+

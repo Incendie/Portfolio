@@ -67,6 +67,11 @@
     p {
       margin-top: 20px;
     }
+
+    button.mdl-button--accent.mdl-button--accent.mdl-button--raised {
+      width: 190px;
+      height: 50px;
+    }
   }
 
   .socialBox {
@@ -81,6 +86,7 @@
 
   header {
     min-height: 400px;
+    background-attachment: scroll;
   }
 
   nav {
@@ -143,10 +149,17 @@
   .project {
     display: flex;
     flex-direction: column;
+
   }
+
   .project__box{
     flex-direction: column;
     text-align: left;
+
+    & button.mdl-button--accent.mdl-button--accent.mdl-button--raised, &:nth-child(even) button.mdl-button--accent.mdl-button--accent.mdl-button--raised{
+      margin-left: auto;
+      margin-right: auto;
+    }
 
     img {
       transform: none;
@@ -178,6 +191,10 @@
 @media (max-width: 480px) {
   .wrapper {
     width: 280px;
+  }
+
+  h2 {
+    font-size: 3rem;
   }
 
   .header__main h1 {
