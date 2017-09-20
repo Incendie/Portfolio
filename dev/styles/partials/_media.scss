@@ -17,6 +17,7 @@
 
   aside {
     left: calc(-30% - 20px);
+    top: 400px;
   }
 
   .contact aside {
@@ -236,7 +237,7 @@
   }
 
   .fa-4x {
-    font-size: 3em;
+    font-size: 3em !important;
   }
 
   nav ul {
