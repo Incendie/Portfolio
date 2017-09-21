@@ -109,7 +109,7 @@ portfolio.flickity = () => {
 portfolio.emailAddress = () => {
   let email = "contact";
   let domain = "ansonli.io";
-  $('.emailAddy').html(`<a href="${email}@${domain}">${email}@${domain}</a>`)
+  $('.emailAddy').html(`<a href="mailto:${email}@${domain}">${email}@${domain}</a>`)
 }
 
 portfolio.init = () => {
