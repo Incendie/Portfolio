@@ -17,15 +17,12 @@
   p {
     margin-bottom: 44px;
   }
-}
 
-.resumeLink {
-  color: #fe3a0f;
-
-  &:hover {
-    color: black;
+  .blurb .resumeLink {
+    margin-left: 0;
   }
 }
+
 
 .about__image {
   width: 50%;
