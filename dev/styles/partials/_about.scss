@@ -19,6 +19,14 @@
   }
 }
 
+.resumeLink {
+  color: #fe3a0f;
+
+  &:hover {
+    color: black;
+  }
+}
+
 .about__image {
   width: 50%;
 
