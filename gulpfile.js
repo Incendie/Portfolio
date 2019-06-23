@@ -34,7 +34,7 @@ gulp.task("scripts", () => {
 		.pipe(plumber())
 		.pipe(sourcemaps.init())
 			.pipe(babel({
-				presets: ["es2015"]
+				presets: ["@babel/env"]
 			}))
 		.pipe(sourcemaps.write())
 		.pipe(plumber.stop())
@@ -44,15 +44,15 @@ gulp.task("scripts", () => {
 
 //task to watch other tasks
 gulp.task('watch', () => {
-  gulp.watch('./dev/styles/**/*.scss', ['styles']);
-  gulp.watch('./dev/scripts/main.js', ['scripts']);
+  gulp.watch('./dev/styles/**/*.scss', gulp.series('styles'));
+  gulp.watch('./dev/scripts/main.js', gulp.series('scripts'));
   gulp.watch('*.html', reload);
 });
 
 gulp.task('browser-sync', () => {
   browserSync.init({
-    server: '.'  
-  })
+    server: '.'
+  });
 });
 
-gulp.task('default', ['browser-sync','styles', 'scripts', 'watch']);
+gulp.task('default', gulp.parallel('styles', 'scripts', 'watch', 'browser-sync'));
