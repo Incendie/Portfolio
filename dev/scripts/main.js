@@ -97,7 +97,6 @@ portfolio.flickity = () => {
     imagesLoaded: true,
     wrapAround: true,
     autoPlay: 3000,
-
     pauseAutoPlayOnHover: false
   });
 }

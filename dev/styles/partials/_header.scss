@@ -9,6 +9,11 @@
   transition: .5s ease-in-out;
   z-index: 100;
 
+  label {
+    font-size: 12px;
+    font-weight: bold;
+  }
+
   &.open {
 
     span:first-child {
